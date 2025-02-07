@@ -5,8 +5,11 @@ function append(element){
 }
 
 function insert(position,element){
-    items.splice(position, 0, element)
-
+    // items.splice(position, 0, element)
+    
+    if(position > items.length || position < 0){
+        return
+    }
     for( let i = items.length - 1; i >= position; i--){
         items[i+1] = item[i]
     }
